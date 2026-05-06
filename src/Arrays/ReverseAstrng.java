@@ -29,6 +29,19 @@ public class ReverseAstrng {
     public void reverseString(char[] s) {
         int left = 0;
         int right = s.length-1;
+
+        for(int i = left; i <= right; i++){
+            if(left<right) {
+                char temp = s[i];
+                s[i] = s[right];
+                s[right] = temp;
+                right--;
+                left++;
+            }else {
+                break;
+            }
+        }
+
         while(left < right) { // very important learning
             char temp = s[left];
             s[left]= s[right];
